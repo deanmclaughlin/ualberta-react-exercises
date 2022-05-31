@@ -55,7 +55,7 @@ class GradesChart extends React.Component {
 		        let theField = document.getElementById(theId);
 		        if (theField.value === "") {
 				    theField.focus();
-				    theField.scrollIntoView();
+				    theField.scrollIntoView({block:"center", inline:"nearest"});
 				    return false;
 			    }
 			}
@@ -104,12 +104,12 @@ class GradesChart extends React.Component {
 			    weightField.value = "";
 			}
         }
-		event.target.scrollIntoView();
+		event.target.scrollIntoView({block:"center", inline:"nearest"});
 	}
 	
 	clearAll(event) {
 		this.setState({course: []});
-		event.target.scrollIntoView();
+		event.target.scrollIntoView({block:"center", inline:"nearest"});
 	}
 
     render() {

@@ -43,7 +43,7 @@ class MadLib extends React.Component {
 				}
 			}
 		}
-		document.getElementById("output-paragraph").scrollIntoView();
+		document.getElementById("output-paragraph").scrollIntoView({block:"center", inline:"nearest"});
         this.setState({completed: true});		
 	}
 	

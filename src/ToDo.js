@@ -40,7 +40,7 @@ class ToDo extends React.Component {
 			    textEntry: ""
             });
         }
-		document.getElementById("input").scrollIntoView();
+		document.getElementById("input").scrollIntoView({block:"center", inline:"nearest"});
         document.getElementById("input").focus();	
 	}
 
@@ -48,7 +48,7 @@ class ToDo extends React.Component {
 		this.setState({toDoItems: []});
 		this.setState({doneItems: []});
 		
-		document.getElementById("input").scrollIntoView();
+		document.getElementById("input").scrollIntoView({block:"center", inline:"nearest"});
 		document.getElementById("input").focus();
 	}
 	
@@ -59,7 +59,7 @@ class ToDo extends React.Component {
 		newItems = this.state.doneItems.sort();
 		this.setState({doneItems: newItems});
 		
-		document.getElementById("input").scrollIntoView();
+		document.getElementById("input").scrollIntoView({block:"center", inline:"nearest"});
 		document.getElementById("input").focus();
 	}
 	
@@ -82,7 +82,7 @@ class ToDo extends React.Component {
 			this.setState({toDoItems: [...currentToDo, event.target.value]});
 		}
 	    
-		document.getElementById("input").scrollIntoView();
+		document.getElementById("input").scrollIntoView({block:"center", inline:"nearest"});
 		document.getElementById("input").focus();	
 	}
 

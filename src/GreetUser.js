@@ -29,7 +29,7 @@ class GreetUser extends React.Component {
 	    let theName = event.target.value.trim();
 		theName = theName.replace(/ {2,}/g, " ");
 		this.setState({salutation: "Hello", name: theName});
-		document.getElementById("output-paragraph").scrollIntoView();
+		document.getElementById("output-paragraph").scrollIntoView({block:"center", inline:"nearest"});
 	}
 	
 	handleKeyDown(event) {
@@ -37,7 +37,7 @@ class GreetUser extends React.Component {
 			this.setState({salutation: "Goodbye", name: this.state.name});
 			event.target.value = this.state.name;
      		event.target.blur();
-			document.getElementById("output-paragraph").scrollIntoView();
+			document.getElementById("output-paragraph").scrollIntoView({block:"center", inline:"nearest"});
 		}
 	}
 
